@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'NanumSquareOTF';
+        }
+        .hero{
+            width: 100%;
+            height: 400px;
+            background-color: #323232;
+            position: relative;
+        }
+        .head {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 148px;
+            margin: 0 auto;
+            width: 1392px;
+            background-color: #323232;
+            color: #fff;
+        }
+        .logo{
+            width: 315px;
+        }
+        .menu{
+            display: flex;
+            gap: 45px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .icon{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            width: 315px;
+            font-size: 16px;
+        }
+        .icon1{
+            display: flex;
+            gap: 20px;
+        }
+        .icon2{
+            display: flex;
+            gap: 20px;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .menu li:hover {
+            transform: translateY(-6px);
+        }
+        .menu li{
+            transition: all 0.5s;
+        }
+        .box{
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        .box1{
+            width: 80px;
+            height: 80px;
+            background-color: #323232;
+            z-index: -1;
+            position: absolute;
+            bottom: -35px;
+            transform: rotate(45deg);
+        }
+        .hero-product h1{
+            font-size: 48px;
+            text-align: center;
+            color: #fff;
+            font-weight: 300;
+            margin-top: 67px;
+        }
+        .hero-product span{
+            font-weight: 700;
+        }
+        .place{
+            display: flex;
+            gap: 7px;
+            color: #9d9d9d;
+            width: 1280px;
+            margin: 77px auto 0;
+
+        }
+        #now{
+            color: #fff;
+        }
+        .manhattan{
+            width: 1280px;
+            height: 400px;
+            display: flex;
+            margin: 150px auto 0px;
+            justify-content: space-between;
+            position: relative;
+        }
+        .product{
+            width: 406px;
+            height: 406px;
+        }
+        .product button{
+            display: none;
+        }
+        .manhattan h1{
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .manhattan h2{
+            font-size: 36px;
+            font-weight: bold;
+            margin: 150px 0 10px ;
+        }
+        .manhattan p{
+            font-size: 18px;
+            font-weight: 300;
+
+        }
+        .manhattan-box{
+            background-color: #323232;
+            width: 406px;
+            height: 3px;
+            position: absolute;
+            bottom: 0;
+        }
+        .manhattan img{
+            border-bottom-left-radius: 220px;
+            border-top-left-radius: 220px;
+            animation: circle_moving 3s 1;
+        }
+        @keyframes circle_moving{
+            0%{clip-path: circle(9.2% at 18% 18%);}
+            33%{clip-path: circle(15.2% at 39% 73%);}
+            66%{clip-path: circle(30.9% at 80% 26%);}
+            100%{clip-path: circle(87.5% at 61% 42%);}
+        }
+
+        .degree{
+            width: 1280px;
+            padding-top: 50px;
+            display: flex;
+            margin: 30px auto 150px;
+            font-size: 24px;
+        }
+        .sweetness{
+            width: 640px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .light{
+            width: 640px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle{
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #9d9d9d;
+        }
+        #red{
+            background-color: #ed6c81;
+        }
+
+        .middle-box{
+            width: 55px;
+            height: 55px;
+            margin: 0px auto;
+            background-color: #323232;
+            rotate: 45deg;
+            transition: all 1s;
+        }
+        .middle-box:hover{
+            transform: rotateZ(360deg);
+            background-color: #560f0c;
+        }
+
+        .process{
+            width: 1280px;
+            margin: 150px auto;
+        }
+        .process h1{
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 56px;
+        }
+        .material{
+            display: flex;
+            gap: 30px;
+            width: 1280px;
+            margin: 0 auto;
+        }
+        .material1 h2{
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 27px;
+        }
+        #first{
+            border-radius: 50% 50% 50% 0;
+        }
+        #second{
+            border-radius: 0% 50% 50% 50%;
+        }
+        #third{
+            border-radius: 50% 0% 50% 50%;
+        }
+        #fourth{
+            border-radius: 50% 50% 0% 50%;
+        }
+
+        .animation{
+            width: 1280px;
+            display: flex;
+            margin: 100px 0;
+            border-bottom: solid 3px #323232;
+            padding-bottom: 56px;
+        }
+        .process1{
+            width: 843px;
+        }
+        .process1 p{
+            font-size: 24px;
+            margin-bottom: 44px;
+        }
+        .container1{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            width: 407px;
+        }
+        .container{
+            position: relative;
+        }
+        .container p{
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 30px;
+        }
+        .cherry{
+            position: absolute;
+            z-index: 1;
+            right: 0%;
+            top: -10%;
+            opacity: 0%;
+        }
+        .container:hover .cherry{
+            animation: cherry 10s linear 1 forwards;
+        }
+        .water_wave{
+            width: 300px;
+            height: 300px;
+            background: #fff;
+            border-radius: 150px 150px 500px 500px / 600px 600px 500px 500px;
+            box-shadow:
+            0 0 10px 0 rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            
+        }
+        .water_wave:after,
+        .water_wave:before{
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: 50%;
+            background: #fff;
+        }
+        .water_wave:after{
+            border-radius: 45%;
+            visibility: hidden;
+        }
+        .container:hover .water_wave:after{
+            animation: water_wave 10s linear 1 forwards;
+            visibility: visible;
+        }
+        .container:hover .water_wave:before{
+            animation: water_wave 10s linear 1 forwards;
+            visibility: visible;
+        }
+        .container:hover .water_wave{
+            background: #e47d05;
+        }
+        .water_wave:before{
+            border-radius: 35%;
+            visibility: hidden;
+            background: rgba(255,255,255,0.3);
+        }
+        @keyframes cherry{
+            0%{
+                top: -25%;
+            }
+            17%{
+                top: -25%;
+                opacity: 0%;
+            }
+            18%{
+                top: -25%;
+                opacity: 100%;
+            }
+            25%{
+                top: -10%;
+                opacity: 100%;
+            }
+            100%{
+                top: -10%;
+                opacity: 100%;
+            }
+
+        }
+        @keyframes water_wave{
+            0%{
+                transform: translate(-50%, -50%) rotate(0deg);
+                top: 0%;
+            }
+            25%{
+                transform: translate(-50%, -50%) rotate(180deg);
+                top: -70%;
+            }
+            100%{
+                transform: translate(-50%, -50%) rotate(360deg);
+                border-radius: 45%;
+                top: -70%;
+                
+            }
+        }
+
+        .video{
+            width: 1280px;
+            margin: 0 auto 204PX;
+        }
+        .video h1{
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 56px;
+        }
+        .iframe{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .line{
+            width: 1392px;
+            height: 10px;
+            margin: 0 auto 75px;
+            position: relative;
+        }
+        .line-art{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .line1{
+            width: 207px;
+            height: 1px;
+            background-color: #323232;
+            }
+        .line2{
+            width: 681px;
+            height: 1px;
+            background-color: #323232;
+        }
+        .line3{
+            width: 207px;
+            height: 1px;
+            background-color: #323232;
+            justify-content: flex-end;
+        }
+        .line-box{
+            width: 20px;
+            height: 20px;
+            margin: 0 auto;
+        }
+        .box2{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            bottom: 0;
+            transform: rotate(45deg);
+            background-color: #323232;
+        }
+        .footer{
+            background-color: #323232;
+            width: 100%;
+            height: 338px;
+        }
+        .footer1{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            gap: 35px;
+            color: #fff;
+            list-style: none;
+            font-size: 14px;
+        }
+        .footer-first{
+            width: 1392px;
+            margin: 60px auto 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-img{
+            width: 315px;
+        }
+        .footer-img img{
+            margin-bottom: 15px;
+        }
+        .footer-network{
+            display: flex;
+            flex-direction: column;
+            width: 700px;
+            padding-left: 56px;
+        }
+        .footer-network p{
+            margin-bottom: 10px;
+        }
+        .footer-network #see{
+            color: #acacac;
+            width: 70px;
+            margin-bottom: 20px;
+            padding-bottom: 3px;
+            border-bottom: solid 1px #acacac;
+        }
+        
+        .footer-network button{
+            width: 226px;
+            height: 40px;
+            font-size: 15px;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 20px;
+        }
+        .footer-network button a{
+            color: #323232;
+        }
+        .footer-menu1{
+            margin-right: 100px;
+            width: 84px;
+        }
+        .footer-menu1 li{
+            margin-bottom: 10px;
+        }
+        .footer-menu1 a{
+            color: #acacac;
+        }
+        .footer-menu1 li:nth-child(1){
+            margin-bottom: 15px;
+        }
+        #footer-menu1-a{
+            color: #fff;
+        }
+
+        .footer-menu2{
+            width: 84px;
+        }
+        .footer-menu2 li{
+            margin-bottom: 10px;
+        }
+        .footer-menu2 a{
+            color: #acacac;
+        }
+        .footer-menu2 li:nth-child(1){
+            margin-bottom: 15px;
+        }
+        #footer-menu2-a{
+            color: #fff;
+        }
+
+        .footer-second{
+            width: 1392px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer-line{
+            margin: 0 auto;
+            width: 1392px;
+            height: 1px;
+            background-color: #fff;
+        }
+        .footer-icon{
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+        .data{
+            display: flex;
+            gap: 25px;
+            color: #acacac;
+        }
+        .data a{
+            color: #acacac;
+        }
+        @media(max-width : 400px){
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .hero{
+            width: 100%;
+            height: 102px;
+        }
+        .head{
+            flex-wrap: wrap;
+        }
+        .logo img{
+            width: 126px;
+            height: 19px;
+        }
+        .logo{
+            margin: auto;
+            width: 126px;
+            height: 20px;
+            z-index: 1;
+        }
+        .menu{
+            height: 20px;
+            font-size: 12px;
+            font-weight: 400;
+            gap: 25px;
+            margin: 0 auto;
+            order: 2;
+        }
+        .icon img{
+            width: 20px;
+            height: 20px;
+        }
+        .icon{
+            width: 350px;
+            height: 24px;
+            justify-content: space-between;
+            gap: 20px;
+            position: absolute;
+            top: 16px;
+            left: 20px;
+        }
+        .head{
+            width: 400px;
+            height: 102px;
+            position: relative;
+            align-items: normal;
+        }
+        .hero-product{
+            display: none;
+        }
+        .place{
+            width: 350px;
+            align-items: center;
+            margin: 0 auto;
+            position: relative;
+            top: -20px;
+            gap: 3px;
+        }
+        .place p{
+            font-size: 6px;
+        }
+        .place img{
+            width: 8px;
+            height: 8px;
+        }
+        .place #now{
+            font-size: 8px;
+        }
+        .box{
+            width: 25px;
+            height: 25px;
+        }
+        .box1{
+            width: 25px;
+            height: 25px;
+            bottom: -12.5px;
+        }
+
+        .manhattan{
+            width: 350px;
+            height: 82px;
+            margin: 50px auto 0px;
+        }
+        .manhattan img{
+            width: 171px;
+            height: 82px;
+            border-bottom-left-radius: 41px;
+            border-top-left-radius: 41px;
+        }
+        .product{
+            width: 171px;
+            height: 82px;
+        }
+        .product button{
+            display: block;
+            border: none;
+            background-color: #323232;
+            width: 50px;
+            height: 20px;
+        }
+        .product a{
+            font-size: 10px;
+        }
+        .manhattan h1{
+            font-size: 20px;
+        }
+        .manhattan h2{
+            font-size: 15px;
+            margin: 12px 0 14px;
+        }
+        .manhattan p{
+            display: none;
+        }
+        .manhattan-box{
+            display: none;
+        }
+        .degree{
+            width: 350px;
+            font-size: 11px;
+            justify-content: space-around;
+            padding-top: 0;
+            margin: 40px auto 40px;
+        }
+        .sweetness{
+            width: 138px;
+            gap: 8px;
+        }
+        .light{
+            width: 138px;
+            gap: 8px;
+        }
+        .circle{
+            width: 8px;
+            height: 8px;
+        }
+        .middle-box{
+            width: 20px;
+            height: 20px;
+            margin-bottom: 30px;
+        }
+        .process{
+            width: 350px;
+            margin: 0 auto;
+        }
+        .process h1{
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .process1{
+            width: 350px;
+        }
+        .process1 p{
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        .material{
+            width: 350px;
+            gap: 8px;
+        }
+        .material1 img{
+            width: 82px;
+        }
+        .material1 h2{
+            font-size: 10px;
+            letter-spacing: -0.3px;
+            margin-top: 10px;
+        }
+        .animation{
+            width: 350px;
+            flex-wrap: wrap;
+            margin: 30px auto;
+            padding-bottom: 20px;
+        }
+        .water_wave{
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+        }
+        .cherry img{
+            width: 100px;
+        }
+        .cherry{
+            right: 18%;
+        }
+        .video{
+            width: 350px;
+            margin: 50px auto 0;
+        }
+        .video h1{
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .iframe{
+            width: 350px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .iframe iframe{
+            width: 350px;
+            height: 205px;
+        }
+        
+
+        .line{
+            width: 390px;
+            height: 5px;
+            margin: 50px auto 20px;
+        }
+        .line1{
+            width: 40px;
+            height: 0.5px;
+        }
+        .line2{
+            width: 230px;
+            height: 0.5px;
+        }
+        .line3{
+            width: 40px;
+            height: 0.5px;
+        }
+        .line-box{
+            width: 5px;
+            height: 5px;
+        }
+        .box2{
+            width: 5px;
+            height: 5px;
+            bottom: 2.5px;
+        }
+        
+        .footer{
+            width: 100%;
+            height: 200px;
+            padding-top: 20px;
+        }
+        .footer1{
+            width: 390px;
+            margin: 0 auto;
+            gap: 10px;
+        }
+        .footer-first{
+            margin: 0 20px 0 20px;
+            justify-content: normal;
+            gap: 8px;
+            width: 350px;
+            flex-wrap: wrap;
+        }
+        .footer-img{
+            width: 171px;
+        }
+        .footer-img img{
+            width: 128px;
+            height: 15px;
+        }
+        .footer-img h2{
+            font-size: 10px;
+        }
+        .footer-network{
+            width: 171px;
+            padding: 0;
+        }
+        .footer-network p{
+            font-size: 10px;
+            font-weight: 300;
+            margin: 0;
+        }
+        .footer-network a{
+            font-size: 10px;
+            font-weight: 300;
+        }
+        .footer-network #see{
+            width: 50px;
+            margin: 4px 0 8px 0;
+            padding-bottom: 2px;
+            border-bottom: solid 0.5px;
+        }
+        .footer-network button{
+            width: 120px;
+            height: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 300;
+        }
+        .footer-menu1{
+            width: 50px;
+            margin: 0;
+            font-size: 8px;
+            font-weight: 300;
+        }
+        .footer-menu1 li{
+            margin-bottom: 3px;
+        }
+        .footer-menu1 li:nth-child(1){
+            margin-bottom: 5px;
+        }
+        .footer-menu2{
+            width: 50px;
+            font-size: 8px;
+            font-weight: 300;
+        }
+        .footer-menu2 li{
+            margin-bottom: 3px;
+        }
+        .footer-menu2 li:nth-child(1){
+            margin-bottom: 5px;
+        }
+        .footer-second{
+            width: 350px;
+            height: 20px;
+            margin: 0 20px;
+            align-items: center;
+            font-weight: 300;
+        }
+        .footer-line{
+            width: 390px;
+            height: 0.5px;
+        }
+        .footer-icon{
+            width: 350px;
+            gap: 20px;
+        }
+        .footer-icon img{
+            width: 14px;
+        }
+        .data{
+            width: 350px;
+            font-size: 8px;
+            gap: 0px;
+            justify-content: space-between;
+        }
+         
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero">
+          <div class="head">
+            <a class="logo" href="index.html"><img src="아이콘/Spirit Adventure.svg"></a>
+        
+          
+          
+            <ul class="menu">
+             <li><a href="recipes.html">Recipe</a></li>
+             <li><a href="community.html">Community</a></li>
+             <li><a href="#">Festival</a></li>
+             <li><a href="sides.html">Sides</a></li>
+             <li><a href="material.html">Material</a></li>
+            </ul>
+      
+        
+      
+            <div class="icon">
+                <ul>
+                <div class="icon1">
+                 <li><a href="#"><img src="아이콘/search.svg" width="28px"></a></li>
+                 <li><a href="#"><img src="아이콘/globe.svg" width="28px"></a></li>
+                </div>
+                </ul>
+    
+                <ul>
+                <div class="icon2">
+                 <li><a href="#"><img src="아이콘/bookmark.svg" height="28px"></a></li>
+                 <li><a href="#"><img src="아이콘/log-in.svg" width="28px"></a></li>
+                 </div>
+                 </ul>
+             </div>
+
+            
+          </div>
+
+          <div class="hero-product">
+            <h1><span> 원하는</span> 칵테일을 함께 찾아볼까요?</h1>
+          </div>
+
+          <div class="place">
+            <p>HOME</p>
+            <img src="아이콘/arrow_gray.svg">
+            <p>Recipe</p>
+            <img src="아이콘/arrow_gray.svg">
+            <p>High Alcohol</p>
+            <img src="아이콘/arrow white.svg">
+            <p id="now">Manhattan</p>
+          </div>
+
+          <div class="box">
+            <div class="box1">
+            </div>
+          </div>
+
+        </div>
+    </header>
+
+    <div class="manhattan">
+        <div class="product">
+            <h1>MANHATTAN</h1>
+            <h2>칵테일의 여왕</h2>
+            <p>윈스턴 처칠의 어머니가 당시 대통령 후보였던 새뮤얼<br>
+               J.틸던을 위한 파티를 열었는데, 이때 레인 마셸이라는<br> 
+               바텐더가 선보였던 칵테일이라는 것. 이후 클럽의<br> 
+               이름을 가져와 유래 됐다고 한다.
+            </p>
+            <button><a href="">더보기</a></button>
+            <div class="manhattan-box">
+            </div>
+        </div>
+        <img src="맨해튼이미지/manhattan1.jpg">
+    </div>
+
+    <div class="degree">
+        <div class="sweetness">
+            <span>Dry</span>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div id="red" class="circle"></div>
+            <div class="circle"></div>
+            <span>Sweet</span>
+        </div>
+        <div class="light">
+            <span>Light</span>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div  id="red" class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <span>Full</span>
+        </div>
+    </div>
+
+    <div class="middle-box">
+    </div>
+
+    <div class="process">
+        <h1>MATERIAL & PROCESS</h1>
+
+        <div class="material">
+            <div class="material1">
+                <img id="first" src="맨해튼이미지/manhattan2.jpg">
+                <h2>버팔로 트레이스<br>45ml</h2>
+            </div>
+            <div class="material1">
+                <img id="second" src="맨해튼이미지/manhattan3.jpg">
+                <h2>친자노 로쏘<br>23ml</h2>
+            </div>
+            <div class="material1">
+                <img id="third" src="맨해튼이미지/manhattan4.jpg">
+                <h2>앙고스투라 비터스<br>1ml</h2>
+            </div><div class="material1">
+                <img id="fourth" src="맨해튼이미지/manhattan5.jpg">
+                <h2>룩사르도 마라스키노<br>체리</h2>
+            </div>
+        </div>
+
+        <div class="animation">
+        <div class="process1">
+            <p>1. 믹싱 글라스에 준비한 버팔로 트레이스를 45ml 넣어줍니다.</p>
+            <p>2. 이어서 가향 와인 스위트 버뭇인 친자노 로쏘를 23ml 넣어줍니다.</p>
+            <p>3. 앙고스투라 비터스를 1ml 넣어 향을 더욱 풍부하게 해줍니다.</p>
+            <p>4. 얼음을 넣고 믹싱 글라스를 적당한 세기로 30초간 흔들어줍니다.</p>
+            <p>5. 트레이스를 사용해 얼음을 걸러내면서 차가운 잔에 칵테일을 넣어줍니다.</p>
+            <p>6. 마지막으로 달콤한 체리가니시를 올려주면 칵테일의 여왕 맨해튼 완성입니다.</p>
+        </div>
+
+        <div class="container1">
+            <div class="container">
+                <div class="cherry"><img src="맨해튼이미지/cherry.svg"></div>
+                <div class="water_wave"></div>
+                <p>마우스를 올려 칵테일을 완성시켜주세요!</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="video">
+        <h1>VIDEO</h1>
+        <div class="iframe">
+        <iframe width="625" height="367" src="https://www.youtube.com/embed/MqYa6AzDYMQ?si=pNlKT3a6rSY1lOS1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="625" height="367" src="https://www.youtube.com/embed/YhsHhdseYkY?si=ZkILqjqNtqO8KZud" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <div class="line">
+        <div class="line-art">
+        <div class="line1">
+        </div>
+        <div class="line2">
+        </div>
+        <div class="line3">
+        </div>
+        </div>
+
+        <div class="line-box">
+            <div class="box2">
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer1">
+            <div class="footer-first">
+
+                <div class="footer-img">
+                    <img src="아이콘/Spirit Adventure.svg">
+                    <h2 >Enjoy It</h2>
+                </div>
+
+                <div class="footer-network">
+                    <p>여러분의 더 나은 비즈니스 환경을 위한<br>다양한 혜택들을 받으세요</p>
+                    <a id="see" href="">자세히 보기</a>
+                    <button><a href="">SPIRIT Network 가입하기</a></button>
+                </div>
+
+                <div class="footer-menu1">
+                    <li><a id="footer-menu1-a" href="#">사용자 문의</a></li>
+                    <li><a href="#">사용자 서비스</a></li>
+                    <li><a href="#">자주 묻는 질문</a></li>
+                    <li><a href="#">피드백</a></li>
+                </div>
+
+                <div class="footer-menu2">
+                    <li><a id="footer-menu2-a" href="#">SPIRIT 이야기</a></li>
+                    <li><a href="#">SPIRIT 소개</a></li>
+                    <li><a href="#">소식</a></li>
+                </div>
+
+            </div>
+
+            <div class="footer-line">
+            </div>
+    
+            <div class="footer-second">
+                <div>
+                <ul class="footer-icon">
+                    <li><a href="#"><img src="아이콘/facebook.svg" width="24px"></a></li>
+                    <li><a href="#"><img src="아이콘/insta.svg" width="24px"></a></li>
+                    <li><a href="#"><img src="아이콘/youtube.svg" height="24px"></a></li>
+                </ul>
+                </div>
+
+                <div class="data">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">쿠키 정책</a></li>
+                    <li><a href="#">쿠키 설정</a></li>
+                    <li><a href="#">웹사이트 이용약관</a></li>
+                    <li><p>© ALL RIGHTS RESERVED</p></li>
+                </div>
+            </div>
+    
+        </div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript">
+    (function(w, d, a){
+        w.__beusablerumclient__ = {
+            load : function(src){
+                var b = d.createElement("script");
+                b.src = src; b.async=true; b.type = "text/javascript";
+                d.getElementsByTagName("head")[0].appendChild(b);
+            }
+        };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+    })(window, document, "//rum.beusable.net/load/b231204e103955u800");
+    </script>
+</html>

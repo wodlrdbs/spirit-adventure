@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'NanumSquareOTF';
+            transition: all 0.3s;
+        }
+        .hero{
+            width: 100%;
+            height: 400px;
+            background-color: #323232;
+            position: relative;
+        }
+        .head {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 148px;
+            margin: 0 auto;
+            width: 1392px;
+            background-color: #323232;
+            color: #fff;
+        }
+        .logo{
+            width: 315px;
+        }
+        .menu{
+            display: flex;
+            gap: 45px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .icon{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            width: 315px;
+            font-size: 16px;
+        }
+        .icon1{
+            display: flex;
+            gap: 20px;
+        }
+        .icon2{
+            display: flex;
+            gap: 20px;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .menu li:hover {
+            transform: translateY(-6px);
+        }
+        .menu li{
+            transition: all 0.5s;
+        }
+        .box{
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        .box1{
+            width: 80px;
+            height: 80px;
+            background-color: #323232;
+            z-index: -1;
+            position: absolute;
+            bottom: -35px;
+            transform: rotate(45deg);
+        }
+        .hero-product h1{
+            font-size: 48px;
+            text-align: center;
+            color: #fff;
+            font-weight: 300;
+            margin-top: 67px;
+            animation: hero-product 2s 1;
+            position: relative;
+        }
+        .hero-product span{
+            font-weight: 700;
+        }
+        @keyframes hero-product{
+            0%{
+                top:-80px;
+                opacity: 0;
+            }
+            100%{
+                top: 0;
+                opacity: 1;
+            }
+        }
+        .place{
+            display: flex;
+            gap: 7px;
+            color: #9d9d9d;
+            width: 1280px;
+            margin: 77px auto 0;
+
+        }
+        #now{
+            color: #fff;
+        }
+        .container{
+            width: 1280px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 150px auto;
+            gap: 85px 30px;
+        }
+        .kind-product{
+            width: 406px;
+            height: 615px;
+            display: flex;
+            flex-direction: column;
+        }
+        .kind-product2{
+            width: 406px;
+            height: 615px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .kind-product h1{
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .kind-product h2{
+            font-size: 96px;
+            font-weight: 900;
+            margin-bottom: 26px;
+        }
+        .kind-product p{
+            font-size: 64px;
+            font-weight: bold;
+        }
+        .kind-img p{
+            margin-top: 40px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .kind-img > div{
+            width: 406px;
+            height: 550px;
+            overflow: hidden;
+        }
+        .kind-img:hover img{
+            transform: scale(1.1);
+        }
+        .box-container{
+            display: flex;
+            flex-direction: column;
+            margin: 30px auto;
+            gap: 12px;
+        }
+        .box-1{
+            width: 12px;
+            height: 12px;
+            background-color: #d9d9d9;
+        }
+        .box-2{
+            width: 12px;
+            height: 12px;
+            background-color: #cbcbcb;
+        }
+        .box-3{
+            width: 12px;
+            height: 12px;
+            background-color: #c3c3c3;
+        }
+        .box-4{
+            width: 12px;
+            height: 12px;
+            background-color: #acacac;
+        }
+        .box-5{
+            width: 12px;
+            height: 12px;
+            background-color: #9f9f9f;
+        }
+        .box-6{
+            width: 12px;
+            height: 12px;
+            background-color: #919191;
+        }
+        .box-7{
+            width: 12px;
+            height: 12px;
+            background-color: #868686;
+        }
+        .box-8{
+            width: 12px;
+            height: 12px;
+            background-color: #6b6b6b;
+        }
+        .box-9{
+            width: 12px;
+            height: 12px;
+            background-color: #5b5b5b;
+        }
+        .box-10{
+            width: 12px;
+            height: 12px;
+            background-color: #484848;
+        }
+        .box-11{
+            width: 12px;
+            height: 12px;
+            background-color: #393939;
+        }
+        .box-12{
+            width: 12px;
+            height: 12px;
+            background-color: #242424;
+        }
+
+        .line{
+            width: 1392px;
+            height: 10px;
+            margin: 0 auto 75px;
+            position: relative;
+        }
+        .line-art{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .line1{
+            width: 207px;
+            height: 1px;
+            background-color: #323232;
+            }
+        .line2{
+            width: 681px;
+            height: 1px;
+            background-color: #323232;
+        }
+        .line3{
+            width: 207px;
+            height: 1px;
+            background-color: #323232;
+            justify-content: flex-end;
+        }
+        .line-box{
+            width: 20px;
+            height: 20px;
+            margin: 0 auto;
+        }
+        .box2{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            bottom: 0;
+            transform: rotate(45deg);
+            background-color: #323232;
+        }
+        .footer{
+            background-color: #323232;
+            width: 100%;
+            height: 338px;
+        }
+        .footer1{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            gap: 35px;
+            color: #fff;
+            list-style: none;
+            font-size: 14px;
+        }
+        .footer-first{
+            width: 1392px;
+            margin: 60px auto 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-img{
+            width: 315px;
+        }
+        .footer-img img{
+            margin-bottom: 15px;
+        }
+        .footer-network{
+            display: flex;
+            flex-direction: column;
+            width: 700px;
+            padding-left: 56px;
+        }
+        .footer-network p{
+            margin-bottom: 10px;
+        }
+        .footer-network #see{
+            color: #acacac;
+            width: 70px;
+            margin-bottom: 20px;
+            padding-bottom: 3px;
+            border-bottom: solid 1px #acacac;
+        }
+        
+        .footer-network button{
+            width: 226px;
+            height: 40px;
+            font-size: 15px;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 20px;
+        }
+        .footer-network button a{
+            color: #323232;
+        }
+        .footer-menu1{
+            margin-right: 100px;
+            width: 84px;
+        }
+        .footer-menu1 li{
+            margin-bottom: 10px;
+        }
+        .footer-menu1 a{
+            color: #acacac;
+        }
+        .footer-menu1 li:nth-child(1){
+            margin-bottom: 15px;
+        }
+        #footer-menu1-a{
+            color: #fff;
+        }
+
+        .footer-menu2{
+            width: 84px;
+        }
+        .footer-menu2 li{
+            margin-bottom: 10px;
+        }
+        .footer-menu2 a{
+            color: #acacac;
+        }
+        .footer-menu2 li:nth-child(1){
+            margin-bottom: 15px;
+        }
+        #footer-menu2-a{
+            color: #fff;
+        }
+
+        .footer-second{
+            width: 1392px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer-line{
+            margin: 0 auto;
+            width: 1392px;
+            height: 1px;
+            background-color: #fff;
+        }
+        .footer-icon{
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+        .data{
+            display: flex;
+            gap: 25px;
+            color: #acacac;
+        }
+        .data a{
+            color: #acacac;
+        }
+        @media(max-width : 400px){
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .hero{
+            width: 100%;
+            height: 102px;
+        }
+        .head{
+            flex-wrap: wrap;
+        }
+        .logo img{
+            width: 126px;
+            height: 19px;
+        }
+        .logo{
+            margin: auto;
+            width: 126px;
+            height: 20px;
+            z-index: 1;
+        }
+        .menu{
+            height: 20px;
+            font-size: 12px;
+            font-weight: 400;
+            gap: 25px;
+            margin: 0 auto;
+            order: 2;
+        }
+        .icon img{
+            width: 20px;
+            height: 20px;
+        }
+        .icon{
+            width: 350px;
+            height: 24px;
+            justify-content: space-between;
+            gap: 20px;
+            position: absolute;
+            top: 16px;
+            left: 20px;
+        }
+        .head{
+            width: 400px;
+            height: 102px;
+            position: relative;
+            align-items: normal;
+        }
+        .hero-product{
+            display: none;
+        }
+        .place{
+            width: 350px;
+            align-items: center;
+            margin: 0 auto;
+            position: relative;
+            top: -20px;
+            gap: 3px;
+        }
+        .place p{
+            font-size: 6px;
+        }
+        .place img{
+            width: 8px;
+            height: 8px;
+        }
+        .place #now{
+            font-size: 8px;
+        }
+        .box{
+            width: 25px;
+            height: 25px;
+        }
+        .box1{
+            width: 25px;
+            height: 25px;
+            bottom: -12.5px;
+        }
+         .container{
+            width: 350px;
+            gap: 20px 8px;
+            margin: 50px auto;
+         }   
+
+         .kind-product{
+            width: 171px;
+            height: 265px;
+         }
+         .kind-product2{
+            width: 171px;
+            height: 265px;
+         }
+         .kind-product h1{
+            font-size: 20px;
+         }
+         .kind-product h2{
+            font-size: 28px;
+            margin-bottom: 6px;
+         }
+         .kind-product p{
+            font-size: 20px;
+         }
+         .kind-img{
+            width: 171px;
+            height: 265px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+         }
+         .kind-img p{
+            font-size: 14px;
+            margin-top: 10px;
+         }
+         .kind-img img{
+            width: 171px;
+            height: 239px;
+         }
+         .kind-img > div{
+            width: 171px;
+            height: 239px;
+        }
+         .box-1{
+            width: 6px;
+            height: 6px;
+         }
+         .box-2{
+            width: 6px;
+            height: 6px;
+         }
+         .box-3{
+            width: 6px;
+            height: 6px;
+         }
+         .box-4{
+            width: 6px;
+            height: 6px;
+         }
+         .box-5{
+            width: 6px;
+            height: 6px;
+         }
+         .box-6{
+            width: 6px;
+            height: 6px;
+         }
+         .box-7{
+            width: 6px;
+            height: 6px;
+         }
+         .box-8{
+            width: 6px;
+            height: 6px;
+         }
+         .box-9{
+            width: 6px;
+            height: 6px;
+         }
+         .box-10{
+            width: 6px;
+            height: 6px;
+         }
+         .box-11{
+            width: 6px;
+            height: 6px;
+         }
+         .box-12{
+            width: 6px;
+            height: 6px;
+         }
+         .box-container{
+            margin: 12px auto;
+            gap: 6px;
+        }
+        .line{
+            width: 390px;
+            height: 5px;
+            margin: 50px auto 20px;
+        }
+        .line1{
+            width: 40px;
+            height: 0.5px;
+        }
+        .line2{
+            width: 230px;
+            height: 0.5px;
+        }
+        .line3{
+            width: 40px;
+            height: 0.5px;
+        }
+        .line-box{
+            width: 5px;
+            height: 5px;
+        }
+        .box2{
+            width: 5px;
+            height: 5px;
+            bottom: 2.5px;
+        }
+        
+        .footer{
+            width: 100%;
+            height: 200px;
+            padding-top: 20px;
+        }
+        .footer1{
+            width: 390px;
+            margin: 0 auto;
+            gap: 10px;
+        }
+        .footer-first{
+            margin: 0 20px 0 20px;
+            justify-content: normal;
+            gap: 8px;
+            width: 350px;
+            flex-wrap: wrap;
+        }
+        .footer-img{
+            width: 171px;
+        }
+        .footer-img img{
+            width: 128px;
+            height: 15px;
+        }
+        .footer-img h2{
+            font-size: 10px;
+        }
+        .footer-network{
+            width: 171px;
+            padding: 0;
+        }
+        .footer-network p{
+            font-size: 10px;
+            font-weight: 300;
+            margin: 0;
+        }
+        .footer-network a{
+            font-size: 10px;
+            font-weight: 300;
+        }
+        .footer-network #see{
+            width: 50px;
+            margin: 4px 0 8px 0;
+            padding-bottom: 2px;
+            border-bottom: solid 0.5px;
+        }
+        .footer-network button{
+            width: 120px;
+            height: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 300;
+        }
+        .footer-menu1{
+            width: 50px;
+            margin: 0;
+            font-size: 8px;
+            font-weight: 300;
+        }
+        .footer-menu1 li{
+            margin-bottom: 3px;
+        }
+        .footer-menu1 li:nth-child(1){
+            margin-bottom: 5px;
+        }
+        .footer-menu2{
+            width: 50px;
+            font-size: 8px;
+            font-weight: 300;
+        }
+        .footer-menu2 li{
+            margin-bottom: 3px;
+        }
+        .footer-menu2 li:nth-child(1){
+            margin-bottom: 5px;
+        }
+        .footer-second{
+            width: 350px;
+            height: 20px;
+            margin: 0 20px;
+            align-items: center;
+            font-weight: 300;
+        }
+        .footer-line{
+            width: 390px;
+            height: 0.5px;
+        }
+        .footer-icon{
+            width: 350px;
+            gap: 20px;
+        }
+        .footer-icon img{
+            width: 14px;
+        }
+        .data{
+            width: 350px;
+            font-size: 8px;
+            gap: 0px;
+            justify-content: space-between;
+        }
+         
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero">
+          <div class="head">
+            <a class="logo" href="index.html"><img src="아이콘/Spirit Adventure.svg"></a>
+        
+          
+          
+            <ul class="menu">
+             <li><a href="recipes.html">Recipe</a></li>
+             <li><a href="community.html">Community</a></li>
+             <li><a href="#">Festival</a></li>
+             <li><a href="sides.html">Sides</a></li>
+             <li><a href="material.html">Material</a></li>
+            </ul>
+      
+        
+      
+            <div class="icon">
+                <ul>
+                <div class="icon1">
+                 <li><a href="#"><img src="아이콘/search.svg" width="28px"></a></li>
+                 <li><a href="#"><img src="아이콘/globe.svg" width="28px"></a></li>
+                </div>
+                </ul>
+    
+                <ul>
+                <div class="icon2">
+                 <li><a href="#"><img src="아이콘/bookmark.svg" height="28px"></a></li>
+                 <li><a href="#"><img src="아이콘/log-in.svg" width="28px"></a></li>
+                 </div>
+                 </ul>
+             </div>
+
+            
+          </div>
+
+          <div class="hero-product">
+            <h1>더<span> 좋은</span> 칵테일을 위해선<span> 충분한 재료</span>가 필요합니다.</h1>
+          </div>
+
+          <div class="place">
+            <p>HOME</p>
+            <img src="아이콘/arrow white.svg">
+            <p id="now">Meterial</p>
+          </div>
+
+          <div class="box">
+            <div class="box1">
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="kind-product">
+            <h1>KIND</h1>
+            <div class="box-container">
+                <div class="box-1"></div>
+                <div class="box-2"></div>
+                <div class="box-3"></div>
+                <div class="box-4"></div>
+                <div class="box-5"></div>
+                <div class="box-6"></div>
+                <div class="box-7"></div>
+                <div class="box-8"></div>
+                <div class="box-9"></div>
+                <div class="box-10"></div>
+                <div class="box-11"></div>
+                <div class="box-12"></div>
+            </div>
+            <h2>GOOD</h2>
+            <p>좋은</p>
+        </div>
+
+        <div class="kind-img">
+            <div><a href="#"><img src="메테리얼이미지/material1.jpg"></a></div>
+            <p>WHISKEY</p>
+        </div>
+
+        <div class="kind-img">
+            <div><a href="#"><img src="메테리얼이미지/material2.jpg"></a></div>
+            <p>JUICE</p>
+        </div>
+
+        <div class="kind-img">
+            <div><a href="#"><img src="메테리얼이미지/material3.jpg"></a></div>
+            <p>GLASS</p>
+        </div>
+
+        <div class="kind-img">
+            <div><a href="#"><img src="메테리얼이미지/material4.jpg"></a></div>
+            <p>SHAKER</p>
+        </div>
+
+        <div class="kind-product2">
+            <div class="box-container">
+                <div class="box-12"></div>
+                <div class="box-11"></div>
+                <div class="box-10"></div>
+                <div class="box-9"></div>
+                <div class="box-8"></div>
+                <div class="box-7"></div>
+                <div class="box-6"></div>
+                <div class="box-5"></div>
+                <div class="box-4"></div>
+                <div class="box-3"></div>
+                <div class="box-2"></div>
+                <div class="box-1"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="line">
+        <div class="line-art">
+        <div class="line1">
+        </div>
+        <div class="line2">
+        </div>
+        <div class="line3">
+        </div>
+        </div>
+
+        <div class="line-box">
+            <div class="box2">
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer1">
+            
+            <div class="footer-first">
+
+                <div class="footer-img">
+                    <img src="아이콘/Spirit Adventure.svg">
+                    <h2 >Enjoy It</h2>
+                </div>
+
+                <div class="footer-network">
+                    <p>여러분의 더 나은 비즈니스 환경을 위한<br>다양한 혜택들을 받으세요</p>
+                    <a id="see" href="">자세히 보기</a>
+                    <button><a href="">SPIRIT Network 가입하기</a></button>
+                </div>
+
+                <div class="footer-menu1">
+                    <li><a id="footer-menu1-a" href="#">사용자 문의</a></li>
+                    <li><a href="#">사용자 서비스</a></li>
+                    <li><a href="#">자주 묻는 질문</a></li>
+                    <li><a href="#">피드백</a></li>
+                </div>
+
+                <div class="footer-menu2">
+                    <li><a id="footer-menu2-a" href="#">SPIRIT 이야기</a></li>
+                    <li><a href="#">SPIRIT 소개</a></li>
+                    <li><a href="#">소식</a></li>
+                </div>
+
+            </div>
+
+            <div class="footer-line">
+            </div>
+    
+            <div class="footer-second">
+                <div>
+                <ul class="footer-icon">
+                    <li><a href="#"><img src="아이콘/facebook.svg" width="24px"></a></li>
+                    <li><a href="#"><img src="아이콘/insta.svg" width="24px"></a></li>
+                    <li><a href="#"><img src="아이콘/youtube.svg" height="24px"></a></li>
+                </ul>
+                </div>
+
+                <div class="data">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">쿠키 정책</a></li>
+                    <li><a href="#">쿠키 설정</a></li>
+                    <li><a href="#">웹사이트 이용약관</a></li>
+                    <li><p>© ALL RIGHTS RESERVED</p></li>
+                </div>
+            </div>
+    
+        </div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript">
+    (function(w, d, a){
+        w.__beusablerumclient__ = {
+            load : function(src){
+                var b = d.createElement("script");
+                b.src = src; b.async=true; b.type = "text/javascript";
+                d.getElementsByTagName("head")[0].appendChild(b);
+            }
+        };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+    })(window, document, "//rum.beusable.net/load/b231204e103955u800");
+    </script>
+</html>
